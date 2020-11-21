@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+   <meta charset="utf-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1 user-scalable=yes"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1 user-scalable=no">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>Levelup</title>
+    <link rel="apple-touch-icon" sizes="57x57" href="images/Levelup_114d.png">
+    <link rel="stylesheet" href="styles/app.css">
+   </head>
+
+  <body>
+    <span class="banner" style="font-size: 16pt" >澳門保安部隊軍事化人員﹣晉升公式</span><br>
+    <a style="font-size:10pt;" href="http://bo.io.gov.mo/bo/i/2004/13/regadm09_cn.asp" target="_blank">第9/2004號行政法規</a>
+    <span>/</span>
+    <a style="font-size:10pt;" href="http://bo.io.gov.mo/bo/i/2005/35/despseg_cn.asp" target="_blank">第81/2005號保安司司長批示</a>
+    <span><input type="number" id="StaffID" class="StaffID" value=""></span>
+
+
+    <hr>
+    <div id="div_if">
+      <span class="item">最近四次個人評語得分</span>
+
+      <!--  <span id="demo5r" class="demo5r">0</span> -->
+    <br>
+
+    <input type="number" id="IF1" class="IF1" value=0>
+    <input type="number" id="IF2" class="IF2" value=0>
+    <input type="number" id="IF3" class="IF3" value=0>
+    <input type="number" id="IF4" class="IF4" value=0>
+    <br>
+    IF 平均分(以不進位方式計算) :  <span id="demo5" class="demo5">0</span>
+    <br>
+    </div>
+
+      <div id="div_ha" class="div_ha">
+      <hr>
+    <span class="item">(HA 學歷)</span><br>
+     <!-- <p>06年級=03,09年級=05,11年級=07,12年級=08,大於12年級=10</p> -->
+     <input type="radio" name="HA" value=3 >06年級
+     <input type="radio" name="HA" value=5 >09年級
+     <input type="radio" name="HA" value=7 >11年級
+     <input type="radio" name="HA" value=8 >12年級
+     <input type="radio" name="HA" value=10 checked>12年級以上
+      <hr>
+    </div>
+
+    <div id="div_tp">
+    <span class="item">(TP 年資)</span><br>
+     <!-- <p>03年=01, 04年=02, 05年=03, 06年=04, 07年=05, 08年=06, 09年=07, 10年=08, 11年=09, 12年=10</p> -->
+     <input type="radio" name="TP" value=1 >03年
+     <input type="radio" name="TP" value=2 >04年
+     <input type="radio" name="TP" value=3 >05年
+     <input type="radio" name="TP" value=4 >06年
+     <input type="radio" name="TP" value=5 >07年
+     <input type="radio" name="TP" value=6 >08年
+     <input type="radio" name="TP" value=7 >09年
+     <input type="radio" name="TP" value=8 >10年
+     <input type="radio" name="TP" value=9 >11年
+     <input type="radio" name="TP" value=10 checked>等於或高於12年
+      </div>
+
+      <div id="div_lv" style="font-size:12pt">
+        <hr>
+     <span class="item">(LV 嘉獎)</span> <input type="number" id = "LV" class="LV" value=0.3><br>
+     <span style="font-size: 10pt" >行政長官＝1.5 / 司長＝1.0 / 警察總局局長＝0.8</span><br>
+     <span style="font-size: 10pt" >部隊局長或校長＝0.5</span><br>
+     <span style="font-size: 10pt" >其他擔任指揮或主管職務的警官,消防官＝0.3</span><br>
+        <hr>
+    </div>
+
+     <div id="div_cd">
+     <span class="item">(CD 勳章)</span> <input  type="number" id = "CD" class="CD" value=0><br>
+     <span style="font-size: 10pt" >1999/12/20前頒授的勳章：</span><br>
+     <span style="font-size: 10pt" >仁愛獎章＝1.5 / 勞績獎章＝1.3 / 功績獎章＝1.0</span><br>
+     <span style="font-size: 10pt" >1999/12/20後頒授的勳章：</span><br>
+     <span style="font-size: 10pt" >榮譽勳章＝3.0 / 功績勳章＝2.0 / 傑出服務獎章＝1.5 / 獎狀＝1.0</span><br>
+     </div>
+
+
+    <div id="div_result" class="div_result">
+      <hr>
+    <span style="font-size: 14pt" >首席警員/首席消防員</span>
+    <span id="demo10" style="font-size: 14pt;position:absolute;right:30%;"></span>
+    <span id="demo13" style="font-size: 14pt; color:RED;position:absolute;right:18%;" ></span><br>
+    <span style="font-size: 14pt" >副警長/副消防區長</span>
+    <span id="demo11" style="font-size: 14pt;position:absolute;right:30%;"></span>
+    <span id="demo14" style="font-size: 14pt; color:RED;position:absolute;right:18%;" ></span><br>
+    <span style="font-size: 14pt" >警長/消防區長</span>
+    <span id="demo12" style="font-size: 14pt;position:absolute;right:30%;"></span>
+    <span id="demo15" style="font-size: 14pt; color:RED;position:absolute;right:18%;" ></span>
+      <hr>
+    </div>
+
+    <button onclick="myFunction()" class="myFunction" >計算</button>
+
+<script src="scripts/app.js"></script>
+  </body>
+</html>
